@@ -1,0 +1,33 @@
+---
+title: "Yogoflow"
+description: "Easily create tasteful yoga videos in minutes with yogoflow. |https://github.com/dharness/yogoflow"
+disableTableOfContents: true
+---
+
+Easily create tasteful yoga videos in minutes with yogoflow.
+
+<div style={{ borderRadius: "100px" }}>
+  <img src="./software/yogoflow-demo.gif" alt="Yogoflow" />
+</div>
+<br />
+<br />
+
+Yogoflow automatically classifies and annotates sections of your video with the appropriate yoga move.
+
+### How it's made
+
+Yogoflow is a React app with a python backend. Uploaded videos are split into 1 second clips on the server, and a frame from each chunk is sampled.
+The frame is processed using a conputer-vision model I built using <a href="https://roboflow.com/">Roboflow</a>. It's trained on a sample of around 1000 yoga poses.
+The model inferences for each frame are "quantized" into regions, so noise is removed from the data and the poses are more stable.
+
+The poses are then added as image overlays based on the style-config sent in the request, and the video is returned for download!
+
+### How to use it
+
+1. Upload a video of yourself doing yoga.
+2. Choose where you want your captions displayed.
+3. That's it! Yogoflow will automatically classify and annotate sections of your video with the appropriate yoga move.
+4. Download your video.
+
+<br />
+<br />

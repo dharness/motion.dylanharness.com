@@ -1,0 +1,7 @@
+div[class*="LogoContainer"] a {
+  text-decoration: none;
+}
+
+a {
+  word-wrap: break-word;
+}

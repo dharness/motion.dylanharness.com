@@ -1,0 +1,100 @@
+---
+title: "Curve-IK"
+description: "CurveIK is a custom inverse kinematics library written in C++ for Unreal Engine 4. | https://github.com/dharness/CurveIK/"
+disableTableOfContents: true
+---
+
+CurveIK is an IK (Inverse Kinematics) library for Unreal Engine 4 written in C++. It provides a simple, single bone chain (no branches) solver that uses bezier curves to model the path of the bone chain.
+It's designed to be used for rubber hose style characters.
+
+## Demo
+
+Other IK libraries vs CurveIK:
+
+![Curve-IK demo video in unreal](https://raw.githubusercontent.com/dharness/CurveIK/master/Docs/All_3_vs.gif)
+
+<div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-between', marginTop: 20}}>
+  <video autoPlay={true} loop="loop" muted="muted" playsInline={true} style={{maxWidth: '49%'}}>
+    <source src="./software/handyman/handyman-box.webm" type="video/webm" />
+    <source src="./software/handyman/handyman-box.mp4" type="video/mp4" />
+  </video>
+
+  <video autoPlay={true} loop="loop" muted="muted" playsInline={true} style={{maxWidth: '49%'}}>
+    <source src="./software/handyman/handyman-mushroom.webm" type="video/webm" />
+    <source src="./software/handyman/handyman-mushroom.mp4" type="video/mp4" />
+  </video>
+</div>
+
+<i>
+  Examples of CurveIK in action in a game I was prototyping where you play as a
+  pair of hands.
+</i>
+
+## Animation Blueprints
+
+CurveIK provides a single animation blueprint node:
+
+![Image showing how to use curve-ik in a blueprint](https://raw.githubusercontent.com/dharness/CurveIK/master/Docs/AnimationBlueprintNode.png)
+
+## Paramaters
+
+#### Solver
+
+| Property            | Usage                                                                                                                                                                                        |
+| ------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Curve Type          | Which type of curve the bones align with                                                                                                                                                     |
+| Tip Bone            | The last bone in the chain to be affected                                                                                                                                                    |
+| Root Bone           | The first bone in the chain to be affected                                                                                                                                                   |
+| Max Iterations      | Increasing this value can increase accuracy but may affect performance if set too high                                                                                                       |
+| Curve Detail        | The number of subdivisions the curve is partitioned into. Increasing this value should make the curve smoother, but may affect performance                                                   |
+| Curve Fit Tolerance | The acceptable amount of error between bone positions and the calculated curve position                                                                                                      |
+| Stretch             | The degree to which the bones should stretch to fit the curve more precisely. High values will create short bones in areas of the curve with more bends, and longer bones in straight areas. |
+| Handle Angle        | The angle of offset (in degrees) for the bezier handles. The owning component's up vector is defined to be 0-degrees                                                                         |
+
+### Debug
+
+To Debug your IK setup, enable debug draw in the details panel.
+
+<div style={{display: 'flex', flexWrap: 'wrap',  justifyContent: 'space-between'}}>
+
+<div>
+  <img
+    src="https://raw.githubusercontent.com/dharness/CurveIK/master/Docs/debug.gif"
+    width="300px"
+  />
+  <p>
+    <b>Debug</b>
+  </p>
+</div>
+
+<div>
+  <img
+    src="https://raw.githubusercontent.com/dharness/CurveIK/master/Docs/ShowLinks.png"
+    width="300px"
+  />
+  <p>
+    <b>Show Links</b>
+  </p>
+</div>
+
+<div>
+  <img
+    src="https://raw.githubusercontent.com/dharness/CurveIK/master/Docs/ShowTangents.png"
+    width="300px"
+  />
+  <p>
+    <b>Show Tangents</b>
+  </p>
+</div>
+
+<div>
+  <img
+    src="https://raw.githubusercontent.com/dharness/CurveIK/master/Docs/ShowBoneDirection.png"
+    width="300px"
+  />
+  <p>
+    <b>Show Bone Direction</b>
+  </p>
+</div>
+
+</div>

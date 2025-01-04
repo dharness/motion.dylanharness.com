@@ -1,0 +1,28 @@
+# Sidebar navigation
+
+- label: Projects
+  items:
+    - label: "Sqwak"
+      link: "/sqwak"
+    - label: "react-chat-window"
+      link: "/react-chat-window"
+    - label: "Mr. Makes a Word"
+      link: "/mr-makes-a-word"
+    - label: "Yogoflow"
+      link: "/yogoflow"
+    - label: "Curve IK"
+      link: "/curveik"
+    - label: "seam-carving"
+      link: "/seam-carving"
+    - label: "Projection Mapping"
+      link: "/projection-mapping"
+- label: More
+  items:
+    - label: "About"
+      link: "/about"
+    - label: LinkedIn
+      link: https://www.linkedin.com/in/dhsoftware/
+    - label: "Motion Design"
+      link: https://vimeo.com/823151596
+    - label: "Github"
+      link: https://github.com/dharness

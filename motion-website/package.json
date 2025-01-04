@@ -1,0 +1,55 @@
+{
+  "name": "dylanharness.com",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.1",
+    "@u-wave/react-vimeo": "^0.9.10",
+    "assets": "^3.0.1",
+    "framer-motion": "^10.12.7",
+    "landing": "^0.0.1",
+    "push-dir": "^0.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.1",
+    "src": "^1.1.2",
+    "styled-components": "^5.3.10",
+    "styled-normalize": "^8.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.21.8",
+    "@parcel/optimizer-data-url": "^2.8.3",
+    "@parcel/resolver-glob": "^2.8.3",
+    "@parcel/transformer-inline-string": "^2.8.3",
+    "@parcel/transformer-webmanifest": "^2.8.3",
+    "@types/styled-components": "^5.1.26",
+    "babel-plugin-macros": "^3.1.0",
+    "cpx": "^1.5.0",
+    "http-server": "^14.1.1",
+    "parcel": "^2.8.3",
+    "parcel-reporter-static-files-copy": "^1.5.0",
+    "prettier": "2.8.8",
+    "process": "^0.11.10",
+    "rimraf": "^5.0.0",
+    "sharp": "^0.31.3",
+    "typescript": "^5.0.4"
+  },
+  "staticFiles": {
+    "staticPath": [
+      "CNAME",
+      {
+        "staticPath": "favicon",
+        "watcherGlob": "**"
+      }
+    ]
+  },
+  "scripts": {
+    "start": "parcel ./src/*.html",
+    "build": "parcel build ./src/*.html --public-url /motion/",
+    "clean": "rimraf dist && rimraf .parcel-cache",
+    "prestart": "npm run clean"
+  },
+  "author": "",
+  "license": "ISC"
+}
