@@ -46,7 +46,7 @@
   },
   "scripts": {
     "start": "parcel ./src/*.html",
-    "build": "parcel build ./src/*.html --public-url /motion/",
+    "build": "parcel build ./src/*.html --public-url .",
     "clean": "rimraf dist && rimraf .parcel-cache",
     "prestart": "npm run clean"
   },
