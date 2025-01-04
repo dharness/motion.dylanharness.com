@@ -10,4 +10,4 @@ build:
 	cd ../software-website && npm run build; \
 
 deploy:
-	npx push-dir --dir=software-website/public --branch=gh-pages --verbose
+	npx push-dir --dir=motion-website/public --branch=gh-pages --verbose
