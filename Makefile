@@ -7,4 +7,4 @@ build:
 	cd motion-website && npm run build
 
 deploy:
-	npx push-dir --dir=motion-website/public --branch=gh-pages --verbose
+	npx push-dir --dir=motion-website/dist --branch=gh-pages --verbose
